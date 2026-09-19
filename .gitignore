@@ -1,0 +1,35 @@
+﻿# Build output
+bin/
+obj/
+target/
+build/
+dist/
+
+# Runtime
+logs/
+tmp/
+temp/
+*.log
+
+# Secrets
+.env
+.env.*
+*.key
+*.pfx
+*.p12
+*.pem
+
+# IDE
+.vscode/
+.idea/
+*.user
+*.suo
+
+# Test output
+TestResults/
+coverage/
+artifacts/
+
+# OS
+Thumbs.db
+.DS_Store
