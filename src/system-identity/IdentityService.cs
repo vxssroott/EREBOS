@@ -44,7 +44,7 @@ public sealed class IdentityService : IIdentityService
             SchemaVersion: 1,
             DisplayName: displayName.Trim(),
             CreatedAt: DateTimeOffset.UtcNow,
-            PublicKeyAlgorithm: "Ed25519",
+            PublicKeyAlgorithm: IdentityKeyGenerator.Algorithm,
             PublicKey: Convert.ToBase64String(
                 IdentityKeyGenerator.Generate().PublicKey),
             State: IdentityState.Initialized);
@@ -110,3 +110,5 @@ public sealed class IdentityService : IIdentityService
                 "EREBOS device identity has not been initialized.");
     }
 }
+
+

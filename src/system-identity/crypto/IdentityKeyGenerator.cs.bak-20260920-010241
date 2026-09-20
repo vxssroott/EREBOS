@@ -10,11 +10,14 @@ public sealed record GeneratedIdentityKeyPair(
     byte[] PublicKey,
     byte[] PrivateKey)
 {
+    public string Algorithm { get; init; } = IdentityKeyGenerator.Algorithm;
 }
 
 public static class IdentityKeyGenerator
 {
-public const int PublicKeySize = 32;
+    public string Algorithm { get; init; } = IdentityKeyGenerator.Algorithm;
+
+        public const int PublicKeySize = 32;
     public const int PrivateKeySize = 32;
     public const int SignatureSize = 64;
     public const string Algorithm = "Ed25519";
@@ -130,7 +133,6 @@ public static GeneratedIdentityKeyPair Generate()
         }
     }
 }
-
 
 
 
